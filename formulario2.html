@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+
+    <form action="procesa.php">
+    <header>
+        <h1>FORMULARIO DE REGISTRO</h1>
+    </header>
+    <div>
+        
+            <h2>Nombre y apellido </h2>
+            <div class="fila">
+                <div class="izq">
+                    <label for="nombre">Nombre y apellidos*: </label>
+                </div>
+                <div class="derec">
+                    <input type="text" id="nombre" name="nombre" placeholder="Introduce nombre y apellidos" required>
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="izq">
+                    <label for="user">Nombre de usuarios*: </label>
+                </div>
+                <div class="derec">
+                    <input type="text" id="user" name="user" placeholder="Introduce tu usuarios" required>
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="izq">
+                    <label for="passw">Password *: </label>
+                </div>
+                <div class="derec">
+                    <input type="password" id="passw" name="passw" placeholder="Introduce password" required>
+                </div>
+            </div>
+
+            <div>
+                <h2>Direccion</h2>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="dirr">Tipo de via*:</label>
+                    </div>
+                    <div class="derec">
+                        <input type="radio" name="dirr" value="Calle" required>Calle
+                        <input type="radio" name="dirr" value="Avenida" required>Avenida
+                        <input type="radio" name="dirr" value="Paseo" required>Paseo
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="via">Nombre de la via*: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="text" id="via" name="via" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="num">Numero: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="text" id="num" name="num">
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="postal">Codigo postal*: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="number" id="postal" name="postal" pattern="[0-9]{5}" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="muni">Municipio: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="text" id="muni" name="muni">
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="prov">Provincia: </label>
+                    </div>
+                    <div class="derec">
+                        <select id="prov" name="prov">
+                            <option value="LaRioja">La Rioja</option>
+                            <option value="Cuenca">Cuenca</option>
+                            <option value="Barcelona">Barcelona</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Datos personales</h2>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="dni">DNI*: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="nacimineto">Fecha de nacimiento*: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="date" id="nacimiento" name="nacimiento" placeholder="dd/mm/aaaa" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="email">Email*: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="web">Espacio web: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="url" id="web" name="web">
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="telf">Telefono : </label>
+                    </div>
+                    <div class="derec">
+                        <input type="text" id="telf" name="telf">
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="foto">Fotos : </label>
+                    </div>
+                    <div class="derec">
+                        <input type="file" id="foto" name="foto" accept="image/*">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Interes</h2>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="preferencias">Seleccione sus preferencias : </label>
+                    </div>
+                    <div class="derec">
+                        <input type="radio" name="preferencias" value="Deportes">Deportes
+                        <input type="radio" name="preferencias" value="Musica">Musica
+                        <input type="radio" name="preferencias" value="Cine">Cine
+                        <input type="radio" name="preferencias" value="Informatica">Informatica
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="izq">
+                        <label for="color">Colos preferido: </label>
+                    </div>
+                    <div class="derec">
+                        <input type="color" id="color">
+                    </div>
+                </div>
+            </div>
+            <div class="enviar">
+                <button type="submit" formmethod="POST">Enviar por GET sin validar</button>
+                <button type="submit" formmethod="GET"><img src="descarga.png" height="20px" width="20px"></button>
+            </div>
+    </div>
+</form>
+</body>
+</html>

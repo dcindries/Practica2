@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios </title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form method="POST" action="procesa.php">
+        <table>
+            <tr>
+                <th colspan="2" class="titulo">FORMULARIO DE REGISTRO</th>
+            </tr>
+
+
+            <!---------------NOMBRE Y APELLIDOS--------------------------------------->
+            <tr>
+                <th colspan="2">Nombre y apellido</th>
+            </tr>
+            <tr>
+                <td class="left"><label for="nombre">Nombre y apellidos*: </label></td>
+                <td><input type="text" id="nombre" name="nombre" placeholder="Introduce nombre y apellidos " required></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="user">Nombre de usuarios*: </label></td>
+                <td><input type="text" id="user" name="user" placeholder="Introduce tu usuarios" required></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="passw">Password *: </label></td>
+                <td><input type="password" id="passw" name="passw" placeholder="Introduce password" required></td>
+            </tr>
+
+
+            <!--------------------DIRECCION------------------------------------------->
+            <tr>
+                <th colspan="2">Direccion</th>
+            </tr>
+            <tr>
+                <td class="left"><label for="dirr">Tipo de via*:</label></td>
+                <td>
+                    <input type="radio" name="dirr" value="Calle" required>Calle
+                    <input type="radio" name="dirr" value="Avenida" required>Avenida
+                    <input type="radio" name="dirr" value="Paseo" required>Paseo
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="via">Nombre de la via*: </label></td>
+                <td><input type="text" id="via" name="via" required></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="num">Numero: </label></td>
+                <td><input type="text" id="num" name="num"></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="postal">Codigo postal*: </label></td>
+                <td><input type="number" id="postal" name="postal" pattern="[0-9]{5}" required></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="muni">Municipio: </label></td>
+                <td><input type="text" id="muni" name="muni"></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="prov">Provincia: </label></td>
+                <td>
+                    <select id="prov" name="prov">
+                        <option value="LaRioja">La Rioja</option>
+                        <option value="Cuenca">Cuenca</option>
+                        <option value="Barcelona">Barcelona</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <!--------------DATOS PERSONALES-------------------->
+            <tr>
+                <th colspan="2">Datos personales</th>
+            </tr>
+            <tr>
+                <td class="left"><label for="dni">DNI*: </label></td>
+                <td><input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]" required></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="nacimineto">Fecha de nacimiento*: </label></td>
+                <td><input type="date" id="nacimiento" name="nacimiento" placeholder="dd/mm/aaaa" required></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="email">Email*: </label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="web">Espacio web: </label></td>
+                <td><input type="url" id="web" name="web"></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="telf">Telefono : </label></td>
+                <td><input type="text" id="telf" name="telf"></td>
+            </tr>
+            <tr>
+                <td class="left"><label for="foto">Fotos : </label></td>
+                <td><input type="file" id="foto" name="foto" accept="image/*"></td>
+            </tr>
+
+            <!--------------INTERES---------------------------->
+            <tr>
+                <th colspan="2">Interes</th>
+            </tr>
+            <tr>
+                <td class="left"><label for="preferencias">Seleccione sus preferencias : </label></td>
+                <td>
+                    <input type="radio" name="preferencias" value="Deportes">Deportes
+                    <input type="radio" name="preferencias" value="Musica">Musica
+                    <input type="radio" name="preferencias" value="Cine">Cine
+                    <input type="radio" name="preferencias" value="Informatica">Informatica
+                </td>
+            </tr>
+            <tr>
+                <td class="left"><label for="color">Colos preferido: </label></td>
+                <td><input type="color" id="color"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="submit" formmethod="POST">Enviar por GET sin validar</button>
+                    <button type="submit" formmethod="GET"><img src="descarga.png" height="20px" width="20px"></button>
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
